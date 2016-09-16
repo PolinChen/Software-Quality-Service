@@ -29,3 +29,6 @@
 - [IIS Log Analyzer: logz.io](http://logz.io/blog/iis-log-analyzer/)
 
  ![logz-iis](http://logz.io/wp-content/uploads/2016/11/nginx-business-intelligence.png)
+
+- [Elastic Stack: Process IIS Logs](http://www.secureict.info/2016/07/elastic-stack-process-iis-logs.html) -- good sample
+- :wq!
