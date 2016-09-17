@@ -1,5 +1,87 @@
 ## APACHE Traffic Server log
 
+## apache log location
+- /var/log/httpd/access.log
+- /var/log/httpd/error.log
+
+
+## [Apache Log Analyzer: Elasticsearch, Logstash, and Kibana](http://logz.io/blog/apache-log-analyzer/)
+
+```
+
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+if [type] in [ "apache" , "apache_access" , "apache-access" ]  {
+   grok {
+      match =&gt; [
+      "message" , "%{COMBINEDAPACHELOG}+%{GREEDYDATA:extra_fields}",
+      "message" , "%{COMMONAPACHELOG}+%{GREEDYDATA:extra_fields}"
+      ]
+      overwrite =&gt; [ "message" ]
+   }
+ 
+   mutate {
+      convert =&gt; ["response", "integer"]
+      convert =&gt; ["bytes", "integer"]
+      convert =&gt; ["responsetime", "float"]
+   }
+ 
+   geoip {
+      source =&gt; "clientip"
+      target =&gt; "geoip"
+      add_tag =&gt; [ "apache-geoip" ]
+   }
+ 
+   date {
+      match =&gt; [ "timestamp" , "dd/MMM/YYYY:HH:mm:ss Z" ]
+      remove_field =&gt; [ "timestamp" ]
+   }
+ 
+   useragent {
+      source =&gt; "agent"
+   }
+ }
+```
+- Use Case #1: Operational Analysis
+![ap1](http://logz.io/wp-content/uploads/2016/03/apache-log-analyzer.png)
+
+- Use Case #2: Technical SEO
+i![ap2](http://logz.io/wp-content/uploads/2016/03/apache-server-technical-seo.jpg)
+
+- Visualizing Apache Logs
+![ap3](http://logz.io/wp-content/uploads/2016/03/apache-elk-apps.jpg)
+
+-  [Logstash Configuration Examples](https://www.elastic.co/guide/en/logstash/current/config-examples.html#config-examples)
+
+
+
+
 ### APACHE Traffic Server log
 
 - [Understanding Traffic Server Log Files](https://docs.trafficserver.apache.org/en/latest/admin-guide/monitoring/logging/understanding.en.html)
