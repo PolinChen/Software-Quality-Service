@@ -45,11 +45,38 @@ Byte Count (Byte數量)
 　　支援 NetFlow 功能的網路設備將其所收集到的 Flow 資訊以 UDP 封包送往預先設置 好的流量接收主機，配合 NetFlow 相關收集軟體，如 Cisco 的 NetFlow，FlowCollector 或公開原始碼軟體 Flow-tools，將這些原始流量資料作適當的處理、儲存以提供後續的 相關應用，在接下來的段落中我們接著介紹這些蒐集到的 Flow 資料有哪些應用。
 
 
-## Process NetFlow with nProbe and Elasticsearch](http://www.secureict.info/2015/11/process-netflow-with-nprobe-and_91.html
+## Process NetFlow with nProbe and Elasticsearch
 - [Part 1:](http://www.secureict.info/2015/11/process-netflow-with-nprobe-and.html)
 - [Part 2:](http://www.secureict.info/2015/11/process-netflow-with-nprobe-and_13.html)
 - [Part 3:](http://www.secureict.info/2015/11/process-netflow-with-nprobe-and_91.html)
 
+![newflow3](http://1.bp.blogspot.com/-H-MYESxr1AA/Vj3HlQNflJI/AAAAAAABBWs/LzGU4LPA6TM/s640/ELK%2BNetflow%2BProcessing.png)
 ![newflow1](http://2.bp.blogspot.com/-VFyW5YRv12M/Vkgv9NNp9BI/AAAAAAABBjg/iHkXDZb8-zs/s1600/2015-11-14%2B23_10_41-Discover%2B-%2BKibana.jpg)
 ![newflow2](http://3.bp.blogspot.com/-1AoD3NHgb9E/VkWicfjrHzI/AAAAAAABBcs/xzssLNlFuOI/s640/netflow01.jpg)
-![newflow3](http://1.bp.blogspot.com/-H-MYESxr1AA/Vj3HlQNflJI/AAAAAAABBWs/LzGU4LPA6TM/s640/ELK%2BNetflow%2BProcessing.png)
+
+## [Step-by-Step Setup of ELK for NetFlow Analytics](http://blogs.cisco.com/security/step-by-step-setup-of-elk-for-netflow-analytics)
+
+logstash-staticfile-netflow.conf
+```
+  input {
+    udp {
+      port => 9995
+      codec => netflow {
+        definitions => "/home/administrator/logstash-1.4.2/lib/logstash/codecs/netflow/netflow.yaml"
+        versions => [5]
+      }
+    }
+  }
+```
+o
+## [Open Source Flow Collecting with Elastic, Logstash, and Kibana](https://developer.wordpress.com/2016/02/08/open-source-netflow-with-elastic-logstash-kibana/)
+
+- The map is useful to see how anycast routing is performing.
+![map1](https://developer.files.wordpress.com/2016/01/mapview.png?w=522&h=329&crop=1)
+
+- setup a Denial of Service dashboard that tracks spikes in suspicious traffic, such as DNS, SYN floods, NTP, or any other UDP spikes.
+![map2](https://developer.files.wordpress.com/2016/01/ddos-dash.png?w=898&h=449)
+
+- In this example there was a spike in UDP traffic.  
+![map3](https://developer.files.wordpress.com/2016/01/dash-zoomed.png?w=780)
+
