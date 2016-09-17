@@ -68,7 +68,7 @@ logstash-staticfile-netflow.conf
     }
   }
 ```
-o
+
 ## [Open Source Flow Collecting with Elastic, Logstash, and Kibana](https://developer.wordpress.com/2016/02/08/open-source-netflow-with-elastic-logstash-kibana/)
 
 - The map is useful to see how anycast routing is performing.
@@ -80,3 +80,18 @@ o
 - In this example there was a spike in UDP traffic.  
 ![map3](https://developer.files.wordpress.com/2016/01/dash-zoomed.png?w=780)
 
+
+## [ELK For Network Operations](http://operational.io/elk-for-network-operations/)
+
+ Below are some screenshots showing real-time dashboards that would be useful in a NOC environment.
+- realtime dashboard
+![map4](http://i.imgur.com/lydtCwn.png)
+
+- Denial of Service Attack
+![map5](http://i.imgur.com/plyVY1g.png)
+
+- Attempted DNS DDoS Participation
+![map6](http://i.imgur.com/AQmrdqH.png)
+
+- VOIP provider accidentally routed all voice traffic into our network
+![map7](http://i.imgur.com/ikBKGi8.png)
