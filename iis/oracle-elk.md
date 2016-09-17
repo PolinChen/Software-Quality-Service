@@ -38,3 +38,7 @@
  ![ash2](https://www.elastic.co/assets/blt9d351eced68fb2a6/kibana-split-chart.png)
  ![ash3](https://www.elastic.co/assets/blt4e86578e7326d4c6/kibana-dashboard-hovering.png)
 
+
+### goldengate with ELK
+- file path : /u01/ogg-bd/ggserr.log
+- [sample-gg](http://rmoff.net/2016/04/14/streaming-data-through-oracle-goldengate-to-elasticsearch/)
