@@ -1,12 +1,15 @@
 
 ## Oracle log file
 
+### oracle database log file
+- [oracle all log](https://docs.oracle.com/cd/E18440_01/doc.111/e21484/logs_and_directories.htm#OPCRG169)
+
+
+### 常用的log file
 - alert.log
  - select value from v$parameter where name = 'background_dump_dest'
- - file path: /usr/lib/oracle/xe/app/oracle/admin/XE/bdump
  - file path: /u01/app/oracle/diag/dbms/orcl/orcl/trace
 - Active Session History (ASH) file 
- - file path: 
 - AWR report file:
  - 
 
@@ -42,3 +45,34 @@
 ### goldengate with ELK
 - file path : /u01/ogg-bd/ggserr.log
 - [sample-gg](http://rmoff.net/2016/04/14/streaming-data-through-oracle-goldengate-to-elasticsearch/)
+
+
+
+
+
+
+
+### oracle product log 統攬
+- [oracle-log](https://docs.oracle.com/cd/B14099_19/core.1012/b13995/log.htm)
+
+ -  Oracle Application Development Framework ODL Yes ORACLE_HOME/bc4j/logs/OC4J_Name
+ - BPEL Process Manager Text No ORACLE_HOME/integration/orabpel/system/logs
+ - CM SDK Text No ORACLE_HOME/ifs/cmsdk/log/cmsdk_domain_name/DomainController.log ORACLE_HOME/ifs/cmsdk/log/cmsdk_domain_name/node_name.log 
+ - DCM ODL Yes ORACLE_HOME/dcm/logs
+ - Discoverer Text No ORACLE_HOME/discoverer/logs
+ - Enterprise Manager Text No ORACLE_HOME/sysman/log
+ - Forms Text No ORACLE_HOME/j2ee/OC4J_BI_FORMS/application -deployments/formsapp/island/application.log
+ - HTTP Server Text Yes ORACLE_HOME/Apache/Apache/logs/error_log.time
+ - InterConnect Text No ORACLE_HOME/oai/10.1.2/adapters/adapter_name/logs
+ - Integration B2B ODL Yes ORACLE_HOME/ip/log
+ - BPEL Process Analytics Text No ORACLE_HOME/integration/bam/log
+ - Log Loader ODL Yes ORACLE_HOME/diagnostics/logs
+ - OC4J instance_name Text Yes ORACLE_HOME/j2ee/instance_name/log
+ORACLE_HOME/j2ee/instance_name/application-deployments/application_name/application.log 
+ - OCA Text No From the command line, for administrator use only, messages are stored at: ORACLE_HOME/oca/logs/admin.log
+ - Oracle Internet Directory Text No ORACLE_HOME/ldap/log
+ - OPMN Text No ORACLE_HOME/opmn/logs ORACLE_HOME/opmn/logs/component_type~...
+ - Port Tunneling Text No ORACLE_HOME/iaspt/logs
+ - Reports Server Text No ORACLE_HOME/reports/logs
+ - Single Sign-On Text No ORACLE_HOME/sso/log
+
