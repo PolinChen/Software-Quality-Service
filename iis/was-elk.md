@@ -5,7 +5,8 @@ IBM Websphere Application Server creates the following log files trace.log ,Syst
 
 ### log description
 
-- [was1](http://websphereprof.blogspot.tw/2013/04/ibm-was-log-files-and-its-path.html)
+- [was log](http://websphereprof.blogspot.tw/2013/04/ibm-was-log-files-and-its-path.html)
+- [was detail](https://www.ibm.com/developerworks/community/files/basic/anonymous/api/library/d966e390-ef28-4941-9aed-b406e45ffbd3/document/04a2df1d-e99f-4613-8859-f19bdcf9781d/media/WAS_Logfiles.pdf) pdf
 
 1. Diagnostic Trace Service logs - Contains all output of System.out and System.err streams of the JVM for the application server process and other details. Can be used for the Diagnostic purpose. The default file used to capture the logs is trace.log . Location (given below) and Name of the file can be changed.
 

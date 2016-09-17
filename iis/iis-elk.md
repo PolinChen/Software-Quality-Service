@@ -1,5 +1,11 @@
 ## sample 404 for dashboard
 
+### IIS log file detail description
+
+- [Log Files for a Web site](https://www.iis.net/configreference/system.applicationhost/sites/site/logfile)
+
+
+
 - [HTTP Error Codes graph](https://discuss.elastic.co/t/how-to-change-the-color-of-visualization-based-on-error/2800) 
  note:
   - error code for query 同時顯示不同的pie，製作方式

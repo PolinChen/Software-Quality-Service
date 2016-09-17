@@ -1,0 +1,13 @@
+## APACHE Traffic Server log
+
+### APACHE Traffic Server log
+
+- [Understanding Traffic Server Log Files](https://docs.trafficserver.apache.org/en/latest/admin-guide/monitoring/logging/understanding.en.html)
+
+>
+Traffic Server records information about every transaction (or request) it processes and every error it detects in log files. Traffic Server keeps three types of log files:
+
+>  - Error log files record information about why a particular transaction was in error.
+>  - Event log files (also called access log files) record information about the state of each transaction Traffic Server processes.
+>  - System log files record system information, including messages about the state of Traffic Server and errors/warnings it produces. This kind of information might include a note that event log files were rolled, a warning that cluster communication timed out, or an error indicating that Traffic Server was restarted.
+
