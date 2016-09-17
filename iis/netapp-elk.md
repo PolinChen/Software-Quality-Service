@@ -1,6 +1,6 @@
 ## netapp log file
 
-## [netapp log 描述](
+## [netapp log 描述]()
 
 The following list outlines the various log files and their locations used by Data ONTAP. In addition, ONTAP also uses syslogd daemon to log system messages (and uses the config file /etc/syslog.conf)
 
