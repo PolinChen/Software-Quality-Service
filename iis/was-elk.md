@@ -21,3 +21,32 @@ IBM Websphere Application Server creates the following log files trace.log ,Syst
 ### path 
 
 - linux log path:  /opt/IBM/WebSphere/AppServer/profiles/AppSrv01_nodename/logs/nodename
+
+### logging with ELK
+
+- [Using Docker and ELK to Analyze WebSphere Application Server SystemOut.log](http://www.stoeps.de/using-docker-to-analyze-websphere-application-server-systemout-log/)
+
+ - So now we can start custimizing the view filter for event type, error code and so on. Have fun to start analyzing with ELK.
+![was-elk1](http://www.stoeps.de/wp-content/uploads/2016/05/2016-05-28_16-39-36.png)
+![was-elk2](http://www.stoeps.de/wp-content/uploads/2016/05/2016-05-28_16-47-58.png)
+
+- [Monitor WebSphere with ELK and Nagios](https://kbild.ch/2016/08/monitor-websphere-with-elk-and-nagios/)
+
+![charts](https://kbild.ch/wp-content/themes/website/data/php/timthumb.php?src=wp-content/uploads/2016/08/ELK-Nagios-Flow.001.jpg&q=90&w=648)
+
+- [ELK hunting](https://www.linkedin.com/pulse/elk-hunting-charek-chen?forceNoSplash=true)
+```
+input {
+file {
+path => "/opt/WebSphere/CommerceServer70/instances/demo/httplogs/access_log"
+        start_position => beginning
+}
+}
+filter {
+     grok {
+          match => { 'message' => '\"%{NUMBER:epoch:int}\",\"%{WORD:method}\",\"%{URIPATHPARAM:url}\",\"(%{DATA:queryString})?\",\"%{NUMBER:responseCode:int}\",\"%{NUMBER:bytes:int}\",\"%{NUMBER:duration:int}\",\"%{HOSTPORT:wasserver}\"'}
+}
+```
+
+![wasA](https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAVUAAAAJDA0MWI1NzMzLTM2ZjMtNDkzNS04NmVkLWZjODJmZWJlOWU1ZA.jpg)
+![wasB](https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAWVAAAAJGUyZDk3YWE5LWUxOGYtNGNiNy05M2M3LTdmZTVhNjhmNGVhMw.jpg)
