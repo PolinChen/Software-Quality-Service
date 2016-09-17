@@ -95,3 +95,46 @@ logstash-staticfile-netflow.conf
 
 - VOIP provider accidentally routed all voice traffic into our network
 ![map7](http://i.imgur.com/ikBKGi8.png)
+
+## [NetFlow Analysis using ElasticSearch & Kibana](http://www.bulutsal.com/2014/03/netflow-analysis-using-elasticsearch.html)
+
+![map8](http://1.bp.blogspot.com/-Exgc70P0_L4/Ux456wPJjyI/AAAAAAAABl8/sgm3XdRkfbY/s1600/Kibana+3+++NetFlow2.png)
+
+```
+Netflow captures following fields that can be used to analyze various aspects of the network :
+Timestamp
+Duration
+Protocol
+Source IP
+Source port
+Destination IP
+Destination port
+Bytes
+Packets
+TCP Flags
+Interface
+```
+
+![map9](http://4.bp.blogspot.com/-Kb-j6xgpW78/Ux5CnWVGKCI/AAAAAAAABms/oL8vq5hbH-4/s1600/histogram3.png)
+- [github source](https://github.com/bulutsal/networkanalysis)
+
+## [Network Security with Netflow and IPFIX: Big Data Analytics for Information](https://books.google.com.tw/books?id=dySMCgAAQBAJ&pg=PT171&lpg=PT171&dq=netflow+elk&source=bl&ots=t1vWgKnFZV&sig=PYpLiD7Xj77VQMb9hM2Lw0UbA88&hl=zh-TW&sa=X&ved=0ahUKEwiG0b7ciJbPAhUFlJQKHQ-dBoQ4ChDoAQg9MAI#v=onepage&q=netflow%20elk&f=false) 
+
+the whole book is good
+
+## [Big Data Analysis for Network Security](http://163.28.17.129/plan5.html#)
+
+系統架構圖
+![big1](http://163.28.17.129/css/images/slider5.png)
+
+### 校園網路管理的”Big data”
+網路管理者在維護管理各式各樣網路設備、資安設備、及重要伺服器時，最即時且真實反映網路或服務狀況的資料來源，就是設備產生的各種記錄，例如：
+- 網路路由器/交換器的syslog，netflow，以及經過的所有封包
+- 網頁防火牆等資安設備對於經過的成功或失敗連線session的記錄
+- VPN設備記錄所有成功失敗的帳號登入記錄及來源IP位址等相關資訊
+- DNS伺服器記錄所有domain name查詢，可藉此判斷對惡意網域查詢的中毒電腦
+- 郵件伺服器記錄所有信件進出記錄，可藉此及早察覺異常寄信或帳號被盜用情況
+- 利用DPI技術處理經過網路設備的封包，擷取出網路流量最真實完整的參數，進行更深入的特性分析，及早察覺可能的異常流量
+
+![big2](http://163.28.17.129/css/images/plan5-1.png)
+
