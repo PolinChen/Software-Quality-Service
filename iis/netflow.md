@@ -1,4 +1,4 @@
-## sample for netfow with ELK
+## 使用ELK stack 分析網路流量、異常現象
 
 ### NetFlow 簡介
 
@@ -111,11 +111,9 @@
 ![map4](http://i.imgur.com/lydtCwn.png)
 
 - Dashboard for tracks spikes in suspicious traffic, such as DNS, SYN floods, NTP, or any other UDP spikes.
-
 ![map2](https://developer.files.wordpress.com/2016/01/ddos-dash.png?w=898&h=449)
 
 - Spike in UDP traffic.  
-
 ![map3](https://developer.files.wordpress.com/2016/01/dash-zoomed.png?w=780)
 
 - Denial of Service Attack
