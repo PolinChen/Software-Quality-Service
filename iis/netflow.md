@@ -100,19 +100,24 @@
 - 郵件伺服器記錄所有信件進出記錄，可藉此及早察覺異常寄信或帳號被盜用情況
 - 利用DPI技術處理經過網路設備的封包，擷取出網路流量最真實完整的參數，進行更深入的特性分析，及早察覺可能的異常流量
 
-##  利用ELK 實施的網路監控和分析
+##  利用ELK 實施的網路監控和分析範例
 
-- anycast routing is performing.
-![map1](https://developer.files.wordpress.com/2016/01/mapview.png?w=522&h=329&crop=1)
+- Network activity monitoring 
+![map8](http://1.bp.blogspot.com/-Exgc70P0_L4/Ux456wPJjyI/AAAAAAAABl8/sgm3XdRkfbY/s1600/Kibana+3+++NetFlow2.png)
 
-- Dashboard for tracks spikes in suspicious traffic, such as DNS, SYN floods, NTP, or any other UDP spikes.
-![map2](https://developer.files.wordpress.com/2016/01/ddos-dash.png?w=898&h=449)
-
-- Spike in UDP traffic.  
-![map3](https://developer.files.wordpress.com/2016/01/dash-zoomed.png?w=780)
+- IP traffic  monitoring 
+![map9](http://4.bp.blogspot.com/-Kb-j6xgpW78/Ux5CnWVGKCI/AAAAAAAABms/oL8vq5hbH-4/s1600/histogram3.png)
 
 - realtime dashboard
 ![map4](http://i.imgur.com/lydtCwn.png)
+
+- Dashboard for tracks spikes in suspicious traffic, such as DNS, SYN floods, NTP, or any other UDP spikes.
+
+![map2](https://developer.files.wordpress.com/2016/01/ddos-dash.png?w=898&h=449)
+
+- Spike in UDP traffic.  
+
+![map3](https://developer.files.wordpress.com/2016/01/dash-zoomed.png?w=780)
 
 - Denial of Service Attack
 ![map5](http://i.imgur.com/plyVY1g.png)
