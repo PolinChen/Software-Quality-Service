@@ -1,13 +1,10 @@
 ## Oracle 常用的log文件內容
 
 - Alter log, Error log, tracing file
-
- - Alert log警告日誌是一個特殊的trace文件，它是按照時間排序的一些log或error信息，具體內容包括：
-	- 所有internal error (ora-600), block corruption errors (ora-1578) , 以及死鎖錯誤(ora-60)
-	- 管理性操作，比如create , alert , drop 以及startup , shutdown 和archivelog 語句等。
-	- 相關shared server 及 dispatcher 進程等功能相關的信息和錯誤。
-4. Materialized view 自動刷新時候的錯誤
-5. 數據庫實例啓動的時候初始化參數值
+ Alert log警告日誌是一個特殊的trace文件，它是按照時間排序的一些log或error信息，具體內容包括：
+ - 所有internal error (ora-600), block corruption errors (ora-1578) , 以及死鎖錯誤(ora-60)
+ - 管理性操作，比如create , alert , drop 以及startup , shutdown 和archivelog 語句等。
+ - 相關shared server 及 dispatcher 進程等功能相關的信息和錯誤。
 
 - Active Session History (ASH) file
  - ASH側重於當前數據中活動會話的信息分析，被長期保存在數據字典中，可以通過查詢視圖V$ACTIVE_SESSION_HISTROY來得到。
