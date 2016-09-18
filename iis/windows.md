@@ -22,3 +22,7 @@
 #### Windows Event Log  dashboard
 
 ![ms3](http://www.hcltech.com/sites/default/files/images/monitoring_dashboard.png)
+
+- [Sending Windows Event Logs to Logstash](https://blog.rootshell.be/2015/08/24/sending-windows-event-logs-to-logstash/)
+
+![ms4](https://blog.rootshell.be/wp-content/uploads/2015/07/eventlog-in-logstash.png)
