@@ -85,7 +85,7 @@ cifs stat 10
 
 - [How to collect Performance Statistics for intermittent issues](https://kb.netapp.com/support/index?page=content&id=1012616)
 
-** gPerfstat GUI (Windows, Linux, Mac) **
+**gPerfstat GUI (Windows, Linux, Mac)**
 
 Before using this setup, ensure a sucessful perfstat can be collected using the GUI. If using the gPerfstat GUI an extended perfstat collection can be initiated, this isnt a true rolling perfstat but this can collect multiple perfstat over multiple days and facilitate capturing intermitten issues if the time set covers the issue. The GUI can be setup in multiple ways but the following is an example.
 
@@ -94,9 +94,9 @@ This example sets 18 iterations by 5 minutes, which will collect a minumum of 90
 ![net4](https://kb.netapp.com/library/CUSTOMER/2016-08-04%2011_10_42-Perfstat%208_3%20GUI.png)
 
 
-** Linux/Unix/Mac **
+**Linux/Unix/Mac**
 
-** Perfstat7 (Data ONTAP 7-Mode): **
+**Perfstat7 (Data ONTAP 7-Mode):**
 
 ```
 #!/bin/sh
