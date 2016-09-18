@@ -1,8 +1,9 @@
 ## Window Server Log 
 
-## [Real Time Operational Insights using ELK Stack](http://www.hcltech.com/blogs/real-time-operational-insights-using-elk-stack)
 
 ### Centralized Monitoring system expected feature list:
+
+ [Real Time Operational Insights using ELK Stack](http://www.hcltech.com/blogs/real-time-operational-insights-using-elk-stack)
 
 - Capable of combining data from multiple sources and different formats
 - Capable enough to process GBs of logs daily and support Real-Time or Near Real Time Data analysis and dashboard.
