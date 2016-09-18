@@ -1,6 +1,22 @@
+## Oracle 常用的log文件內容
 
-## Oracle log file
-o
+- Alter log, Error log, tracing file
+
+ - Alert log警告日誌是一個特殊的trace文件，它是按照時間排序的一些log或error信息，具體內容包括：
+	- 所有internal error (ora-600), block corruption errors (ora-1578) , 以及死鎖錯誤(ora-60)
+	- 管理性操作，比如create , alert , drop 以及startup , shutdown 和archivelog 語句等。
+	- 相關shared server 及 dispatcher 進程等功能相關的信息和錯誤。
+4. Materialized view 自動刷新時候的錯誤
+5. 數據庫實例啓動的時候初始化參數值
+
+- Active Session History (ASH) file
+ - ASH側重於當前數據中活動會話的信息分析，被長期保存在數據字典中，可以通過查詢視圖V$ACTIVE_SESSION_HISTROY來得到。
+ - 運行腳本為$ORACLE_HOME/RDBMS/ADMIN/ashrpt.sql
+
+- Automatic Workload Repository (AWR) report
+ - awr由運行在oracle的後台進程自動、定期收集資料庫的性能數據並保存，每一個小時，awr都生成一次性能數據快照，為DBA提供某個時刻資料庫性能分析的數據信息。
+ - awr默認收集最近7天的採集信息
+ - 執行$ORACLE_HOME/RDBMS/ADMIN/awrrpt.sql生成awr報告。
 
 ### Alter log
 
