@@ -1,9 +1,14 @@
 ## SQL server logging file with ELK
 
-### SQL server log file description
-
+### SQL server error log 
 
 檢視 SQL Server 錯誤記錄檔，以確定處理序順利完成 (例如，備份與還原作業、批次命令或其他指令碼和處理序)。這有助於偵測任何目前的或潛在的問題區域，包括自動復原訊息 (尤其是 SQL Server 的執行個體已停止又重新啟動時)、核心訊息或其他伺服器層級的錯誤訊息。
+
+- error log location : D:\Program Files\Microsoft SQL Server\MSSQL10_50.SQL2K8R2\MSSQL\Log\ERRORLOG 和 ERRORLOG.n 檔案中。
+ ![sp2](https://sqlserverhelpdotcom.files.wordpress.com/2011/06/log-folder.png)
+
+- sp_readerrorlog sample
+![sp1](https://az787680.vo.msecnd.net/user/jamesfu/1407/809ff1cf837b_A8E9/image_thumb.png)
 
 
 - [log file sample](https://sqlserver-help.com/2011/06/26/help-where-is-sql-server-errorlog/)
