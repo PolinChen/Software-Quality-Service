@@ -1,10 +1,5 @@
 ## sample for netfow with ELK
 
-## [NetFlow Cookbook](https://code.google.com/p/renisac/wiki/Netflow_Cookbookv1)
-
-
-## [NetFlow](http://blog.xuite.net/vulcan.lee/it/3398786-NetFlow與網管之關係與應用)
-
 ### NetFlow 簡介
 
 　　網路活動的相關資訊可以幫助網管人員瞭解所管轄的網路發生了什麼事、如何發生以及是什麼原因造成的，未來如何預防同樣的事情再次發生，並在網路安全事件發生時提供資訊，協助管理者找出攻擊來源或中毒主機。傳統上網路管理者通常透過SNMP (Simple Network Management Protocol) 協定的工具從支援SNMP的網路設施蒐集網路流量數據，雖然透過此種方式取得資訊不會造成處理上過重的負擔，但是SNMP如同其名提供的只是粗糙、簡略的資料。對網管人員而言，SNMP的資訊只能提供有關網路流量的等級及變化，例如不正常的流量增加，但是要讓網管人員能夠判斷所管轄的網路是否有問題並進一步找出問題所在，則需要更詳細的網路活動相關資訊。
@@ -14,8 +9,6 @@
 > 雖然透過封包監聽工具可以取得更詳細的網路資訊，但因為封包監聽工具通常專注在單一網路封包的內容，而不是整體網路活動的狀態，所以網路管理者很難從封包監聽工具所提供的資訊來掌握整體網路的狀態。此外分析封包非常耗費時間和運算資源，而且封包監聽所儲存的資料量也非常驚人，對於資源非常珍貴的路由器等網路設備，除了執行路由運算外還要額外付出資源在分析封包上，這樣的限制在某些環境中要進行封包監聽是不可行的，例如大型繁忙的網路，甚至可能因為網路太過繁忙而導致系統崩潰，因此封包監聽工具通常用來偵測特定事件而不是監控整個網路的運作狀況。
 
 　　因此對網管人員而言，他們需要一套能夠協助其有效掌握整體網路資訊的工具，在此需求下，NetFlow便成為了近來網管人員中相當熱門的工具，因為NetFlow能提供比SNMP更詳細的網路狀況資訊來協助管理者掌握整個網路，而且NetFlow的分析方式也能來避免造成網路頻寬及運算資源過重的負擔。
-
-![netf1](http://www.ren-isac.net/img/googlecode/FlowHierarchy.jpg)
 
 ### NetFlow 運作機制：
 
@@ -141,6 +134,12 @@
 
 
 
+參考資料：
+
+
+## [NetFlow Cookbook](https://code.google.com/p/renisac/wiki/Netflow_Cookbookv1)
+
+## [NetFlow](http://blog.xuite.net/vulcan.lee/it/3398786-NetFlow與網管之關係與應用)
 
 
 ## [NetFlow Analysis using ElasticSearch & Kibana](http://www.bulutsal.com/2014/03/netflow-analysis-using-elasticsearch.html)
