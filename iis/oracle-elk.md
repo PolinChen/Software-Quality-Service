@@ -23,6 +23,7 @@ background_dump_dest                 string      /app/oracle/diag/rdbms/o11gr1/o
  - 運行腳本為$ORACLE_HOME/RDBMS/ADMIN/ashrpt.sql
 
 - Automatic Workload Repository (AWR) report
+
   AWR由運行在oracle的後台進程自動、定期收集資料庫的性能數據並保存，每一個小時，awr都生成一次性能數據快照，為DBA提供某個時刻資料庫性能分析的數據信息。
  - awr默認收集最近7天的採集信息
  - 執行$ORACLE_HOME/RDBMS/ADMIN/awrrpt.sql生成awr報告。
@@ -89,6 +90,7 @@ background_dump_dest                 string      /app/oracle/diag/rdbms/o11gr1/o
 
 
 me simple structure : input, filter, output. And of those, filter is optional. Here’s our starter for ten, that’ll act as a smoke-test for the Logstash-JDBC-Oracle connectivity:
+
 依據Logstash-JDBC-Oracle 的連接方式，的jdbc 設定檔案如下
 
 ```

@@ -3,6 +3,9 @@
 ### SQL server log file description
 
 
+檢視 SQL Server 錯誤記錄檔，以確定處理序順利完成 (例如，備份與還原作業、批次命令或其他指令碼和處理序)。這有助於偵測任何目前的或潛在的問題區域，包括自動復原訊息 (尤其是 SQL Server 的執行個體已停止又重新啟動時)、核心訊息或其他伺服器層級的錯誤訊息。
+
+
 - [log file sample](https://sqlserver-help.com/2011/06/26/help-where-is-sql-server-errorlog/)
 使用 SQL Server Management Studio 或任何文字編輯器來檢視 SQL Server 錯誤記錄檔。根據預設，錯誤記錄檔是位於 Program Files\Microsoft SQL Server\MSSQL.n\MSSQL\LOG\ERRORLOG 和 ERRORLOG.n 檔案中。
 
