@@ -81,14 +81,14 @@
 　　某些蠕蟲或網路攻擊也會利用 ICMP 來進行，例如 W32.Welchia、W32.Blaster 都會利用 ICMP 來掃瞄其他電腦，所以感染這類型蠕蟲的主機會對外送出大量的 ICMP 封包，也會伴隨大量的 ICMP port/host/network unreachable 回應訊息，我們可以從 NetFlow 資料中過濾出有異常行為的主機，首先找出通訊協定 (protocol) 欄位值為 1 的 Flow，代表所使用的通訊協定為 ICMP，再根據目的主機之埠號 (destination TCP/UDP port)欄位值分析出所代表的 ICMP 訊息，例如目的主機之埠號 (destination TCP/UDP port) 欄位值為 2048，轉化成八進位為 800，第一位代表位數字代表的是 ICMP 的類型，後兩碼為這個 ICMP 類型中的編碼，整體的意思是 ICMP echo 請求，但如果欄位值為 769，轉化為八進位則為 301，這個編碼代表得是 ICMP host unreachable，如果欄位值是 771則代表 ICMP port unreachable，欄位值是 768 則代表 ICMP network unreachable，我們可以先找出所使用通訊協定為 ICMP 的 Flow，進一步過濾出其中目的主機所使用埠號為 768、769、771 的 Flow，再進一步分析找出可能的異常行為。透過這種方式從大量 NetFlow 資料中過濾出可疑名單，再對名單內的 Flow 資料進行進一步的分析，這樣可以幫助網路管理者快速地在異常發生的初期找出問題所在。
 
 
-
 ##  利用ELK 建構網路的大資料的收集和分析
 
-    網路管理者面對的網路使用記錄數量繁多且格式各異，若能建立一個具規模彈性（scalable）的雲端巨量資料收集分析架構，便可集中收集分析各種網路、資安、伺服器設備的使用記錄，並進而交叉比對找出異常使用，不僅減輕管理者分析網路資料的負荷，也可以加強整合分析各式網路使用記錄的深度及廣度。ELK stack 可隨時橫向擴充處理能力，不受限於傳統資料庫擴充的限制，對於需要處理大量資料且持續增加的網路管理者而言，是非常適合的工具。
+> 網路管理者面對的網路使用記錄數量繁多且格式各異，若能建立一個具規模彈性（scalable）的雲端巨量資料收集分析架構，便可集中收集分析各種網路、資安、伺服器設備的使用記錄，並進而交叉比對找出異常使用，不僅減輕管理者分析網路資料的負荷，也可以加強整合分析各式網路使用記錄的深度及廣度。ELK stack 可隨時橫向擴充處理能力，不受限於傳統資料庫擴充的限制，對於需要處理大量資料且持續增加的網路管理者而言，是非常適合的工具。
 
 ###  利用ELK 建構網路的大資料的系統架構
 
 系統架構圖
+
 ![big1](http://163.28.17.129/css/images/slider5.png)
 
 網路管理者在維護管理各式各樣網路設備、資安設備、及重要伺服器時，最即時且真實反映網路或服務狀況的資料來源，就是設備產生的各種記錄，例如：
@@ -100,12 +100,33 @@
 - 郵件伺服器記錄所有信件進出記錄，可藉此及早察覺異常寄信或帳號被盜用情況
 - 利用DPI技術處理經過網路設備的封包，擷取出網路流量最真實完整的參數，進行更深入的特性分析，及早察覺可能的異常流量
 
+##  利用ELK 實施的網路監控和分析
+
+- anycast routing is performing.
+![map1](https://developer.files.wordpress.com/2016/01/mapview.png?w=522&h=329&crop=1)
+
+- Dashboard for tracks spikes in suspicious traffic, such as DNS, SYN floods, NTP, or any other UDP spikes.
+![map2](https://developer.files.wordpress.com/2016/01/ddos-dash.png?w=898&h=449)
+
+- Spike in UDP traffic.  
+![map3](https://developer.files.wordpress.com/2016/01/dash-zoomed.png?w=780)
+
+- realtime dashboard
+![map4](http://i.imgur.com/lydtCwn.png)
+
+- Denial of Service Attack
+![map5](http://i.imgur.com/plyVY1g.png)
+
+- Attempted DNS DDoS Participation
+![map6](http://i.imgur.com/AQmrdqH.png)
+
+- VOIP provider accidentally routed all voice traffic into our network
+![map7](http://i.imgur.com/ikBKGi8.png)
 
 
-![big2](http://163.28.17.129/css/images/plan5-1.png)
+## [NetFlow Analysis using ElasticSearch & Kibana](http://www.bulutsal.com/2014/03/netflow-analysis-using-elasticsearch.html)
 
-
-##  利用ELK 建構網路的大資料的收集和分析
+![map8](http://1.bp.blogspot.com/-Exgc70P0_L4/Ux456wPJjyI/AAAAAAAABl8/sgm3XdRkfbY/s1600/Kibana+3+++NetFlow2.png)
 
 
 ## Process NetFlow with nProbe and Elasticsearch
