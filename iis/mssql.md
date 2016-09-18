@@ -8,7 +8,7 @@
  ![sp2](https://sqlserverhelpdotcom.files.wordpress.com/2011/06/log-folder.png)
 
 - sp_readerrorlog sample
-![spx](https://az787680.vo.msecnd.net/user/jamesfu/1407/809ff1cf837b_A8E9/image_thumb.png)
+![sp1](https://sqlserverhelpdotcom.files.wordpress.com/2011/06/errorlog.png)
 
 
 - [log file sample](https://sqlserver-help.com/2011/06/26/help-where-is-sql-server-errorlog/)
