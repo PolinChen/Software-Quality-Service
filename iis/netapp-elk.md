@@ -5,7 +5,7 @@
 The following list outlines the various log files and their locations used by Data ONTAP. In addition, ONTAP also uses syslogd daemon to log system messages (and uses the config file /etc/syslog.conf)
 
 ```
-Messages: /etc/log/messages (symbolic link to /etc/messages)  
+**Messages:** /etc/log/messages (symbolic link to /etc/messages)  
 SnapMirror: /etc/log/snapmirror  
 FlexClone: /etc/log/clone  
 Auditlog: /etc/log/auditlog  
