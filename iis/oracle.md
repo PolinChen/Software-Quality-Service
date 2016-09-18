@@ -58,9 +58,6 @@ background_dump_dest                 string      /app/oracle/diag/rdbms/o11gr1/o
  - It traps the shutdown of the Instance (and fill a field oradb_status accordingly).
  - It traps the fact that the Instance is running (and fill a field oradb_status accordingly).
 
- - 設定alert_log.conf 如下：
-
-
 ### 設定 listener.log 到ELK 相關內容
 
  - The @timestamp field is reflecting the timestamp at which the log entry was created (rather than when logstash read the log entry).
@@ -72,6 +69,7 @@ background_dump_dest                 string      /app/oracle/diag/rdbms/o11gr1/o
  - It traps the command (stop, status, reload) and records it into a dedicated field command.
 
 
+### realtime dashboard 相關案例
 
 - 範例1: connection repartition to our databases by program and by dest_type (listener.log):
 
@@ -82,11 +80,44 @@ background_dump_dest                 string      /app/oracle/diag/rdbms/o11gr1/o
 ![oracleA](https://bdrouvot.files.wordpress.com/2016/03/storm1.png?w=640&h=339)
 
 
-![oracle1](https://bdrouvot.files.wordpress.com/2016/03/kibana_example.png?w=1280&h=676)
+## 利用ELK 來分析ASH report
 
-### ASH with ELK
-- [ASH](https://www.elastic.co/blog/visualising-oracle-performance-data-with-the-elastic-stack) - with JDBC input
+- [ASH report to ELK 案例說明](https://www.elastic.co/blog/visualising-oracle-performance-data-with-the-elastic-stack) 
 
+
+###  Logstash with ASH with JDBC Input
+
+
+me simple structure : input, filter, output. And of those, filter is optional. Here’s our starter for ten, that’ll act as a smoke-test for the Logstash-JDBC-Oracle connectivity:
+依據Logstash-JDBC-Oracle 的連接方式，的jdbc 設定檔案如下
+
+```
+input {
+    jdbc {
+        jdbc_validate_connection => true
+        jdbc_connection_string => "jdbc:oracle:thin:@oradb:1521/orcl"
+        jdbc_user => "system"
+        jdbc_password => "Admin123"
+        jdbc_driver_library => "/opt/ojdbc7.jar"
+        jdbc_driver_class => "Java::oracle.jdbc.driver.OracleDriver"
+        statement => "SELECT sysdate from dual"
+       }
+}
+output   {
+    stdout { codec => rubydebug }
+}
+```
+
+### Dashboard sample chart
+
+- sample1: 
+![sample1](https://www.elastic.co/assets/blt4e86578e7326d4c6/kibana-dashboard-hovering.png)
+
+- sample2: 
+![sample2](https://www.elastic.co/assets/blt9f68cf2410d7e40d/kibana-dashboard-change-view.png)
+
+- sample3: 
+![sample3](https://www.elastic.co/assets/blt9d351eced68fb2a6/kibana-split-chart.png)
 
 
 ### Alter log
