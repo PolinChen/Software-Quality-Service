@@ -102,6 +102,12 @@
 
 ##  利用ELK 實施的網路監控和分析範例
 
+以ELK 建立收集各式網路設備記錄的雲端資料庫
+
+- Logstash：Logstash用於收集各式設備產生的記錄。
+- Elasticsearch：為了處理每天約2億筆記錄如此巨大之資料。
+- Kibana為前端使用者網頁介面，視其需要產生各式統計圖表，作為日常觀察、預防網路攻擊事件使用，如下圖所示:
+
 - Network activity monitoring 
 ![map8](http://1.bp.blogspot.com/-Exgc70P0_L4/Ux456wPJjyI/AAAAAAAABl8/sgm3XdRkfbY/s1600/Kibana+3+++NetFlow2.png)
 
@@ -127,6 +133,14 @@
 
 - VOIP provider accidentally routed all voice traffic into our network
 ![map7](http://i.imgur.com/ikBKGi8.png)
+
+
+
+
+
+
+
+
 
 
 ## [NetFlow Analysis using ElasticSearch & Kibana](http://www.bulutsal.com/2014/03/netflow-analysis-using-elasticsearch.html)
