@@ -111,12 +111,15 @@ output   {
 ### Dashboard sample chart
 
 - sample1: 
-![sample1](https://www.elastic.co/assets/blt4e86578e7326d4c6/kibana-dashboard-hovering.png)
+ ![ash1](https://www.elastic.co/assets/blt4fe75af2c5869737/kibana-visualization-cutomization-2.png)
 
 - sample2: 
-![sample2](https://www.elastic.co/assets/blt9f68cf2410d7e40d/kibana-dashboard-change-view.png)
+![sample1](https://www.elastic.co/assets/blt4e86578e7326d4c6/kibana-dashboard-hovering.png)
 
 - sample3: 
+![sample2](https://www.elastic.co/assets/blt9f68cf2410d7e40d/kibana-dashboard-change-view.png)
+
+- sample4: 
 ![sample3](https://www.elastic.co/assets/blt9d351eced68fb2a6/kibana-split-chart.png)
 
 
