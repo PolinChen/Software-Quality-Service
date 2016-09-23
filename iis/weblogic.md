@@ -1,5 +1,21 @@
 ## logging for weblogic logs
 
+
+
+
+### [日誌文件說明](http://wangrusheng5200.iteye.com/blog/474055)
+ 
+WebLogic SERVER運行日誌
+  
+假如 WebLogic SERVER 在啓動或運行過程中有錯誤發生， 錯誤信息會顯示在屏幕上，並且會記錄在一個LOG文件中，該文件默認名為AdminServer.log。該文件也記錄WebLogic的啓動及關閉等其他運行信息。可在Gernal屬性頁中設置該文件的路徑及名字，錯誤的輸出的等級等。
+ 
+HTTP訪問日誌
+在WebLogic中可以對用HTTP，HTTPS協議訪問的服務器上的文件都做記錄，該LOG文件默認的名字為Access.log,內容如下，該文件具體記錄在某個時間，某個IP地址的客戶端訪問了服務器上的那個文件。
+
+DOMAIN運行日誌
+記錄一個DOMIAN的運行情況，一個DOMAIN中的各個 WebLogic SERVER可以把它們的一些運行信息（比如：很嚴重的錯誤）發送給一個DOMAIN的ADMINISTRATOR SERVER上，ADMINISTRATOR SERVER把這些信息些到 DOMAIN 日誌中。
+
+
 ## [Overview of WebLogic Server Log Messages and Log Files](https://docs.oracle.com/cd/E13222_01/wls/docs81/ConsoleHelp/logging.html#1048117)
 >Each subsystem within WebLogic Server generates server log messages to communicate its status. For example, when you start a WebLogic Server instance, the Security subsystem writes a message to report its initialization status.
 >To keep a record of the messages that its subsystems generate, WebLogic Server writes the messages to log files. The server log file is located on the computer that hosts the server instance. By default, the server log file is located below the server instance's root directory: root-directory\server-name\server-name.log. For more information, refer to Changing the Name and Location of the Server Log File.

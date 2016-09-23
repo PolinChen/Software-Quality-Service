@@ -56,3 +56,6 @@ output {
  - ![jboss4](http://blog.arungupta.me/wp-content/uploads/2015/07/elk-stack-wildfly-output-1024x562.png)
  - ![jboss5](http://wildfly.org/images/2015-07-25-kibana.png)
 
+## jboss for IBM LA
+
+- [Web Access Log Insight 套件](http://www.ibm.com/support/knowledgecenter/zh-tw/SSPFMY_1.3.3/com.ibm.scala.doc/extend/iwa_extend_weblogs_ovw.html)
