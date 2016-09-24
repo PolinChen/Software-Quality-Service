@@ -12,7 +12,7 @@
 - **/var/log/wtmp**：記錄登入者的訊息資料，由於本檔案已經被編碼過，所以必須使用 last 這個指令來取出檔案的內容；
 - **/var/log/btmp** – 記錄所有失敗登錄信息。使用last命令可以查看btmp文件。
 - **/var/log/xferlog** : 該日誌文件記錄FTP會話，可以顯示出用戶向FTP服務器或從服務器拷貝了什麼文件。
-- **/var/log/dmesg**  — 包含內核緩衝信息（kernel ring buffer）。在系統啓動時，會在屏幕上顯示許多與硬件有關的信息。可以用dmesg查看它們。
+- **/var/log/dmesg**  — 包含內核緩衝信息（kernel ring buffer）。在系統啓動時，會在屏幕上顯示許多與硬件有關的信息。
 - **/var/log/auth.log** — 包含系統授權信息，包括用戶登錄和使用的權限機制等。
 - **/var/log/daemon.log** — 包含各種系統後台守護進程日誌信息。
 - **/var/log/dpkg.log** – 包括安裝或dpkg命令清除軟件包的日誌。
