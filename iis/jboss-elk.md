@@ -59,3 +59,8 @@ output {
 ## jboss for IBM LA
 
 - [Web Access Log Insight 套件](http://www.ibm.com/support/knowledgecenter/zh-tw/SSPFMY_1.3.3/com.ibm.scala.doc/extend/iwa_extend_weblogs_ovw.html)
+
+
+## [JEAP 6 - Domain Mode 啟動](http://wei-meilin.blogspot.tw/2012_07_01_archive.html)
+
+- ![log sample](http://3.bp.blogspot.com/-GfYJJOppUEc/UA38QMAeUHI/AAAAAAAAAOY/4R1egmKxrwE/s640/螢幕快照+2012-07-24+上午9.36.29.png)

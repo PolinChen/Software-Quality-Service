@@ -77,3 +77,14 @@ output {
 ![vis1](https://sematext.com/wp-content/uploads/2016/01/live-tail-1024x405.png)
 ![vis2](https://sematext.com/wp-content/uploads/2016/01/dashboard-1024x400.png)
 
+
+
+## [輸出Windows主機Eventlog 透過Syslog存入MySQL](http://www.netadmin.com.tw/article_content.aspx?sn=1602030005)
+
+
+## [Windows事件日誌管理](http://www.manageengine.tw/Manageengine/products/eventlog/windows-event-log-management.html)
+
+- [logstash 所產生的 Windows 作業系統事件格式](http://www.ibm.com/support/knowledgecenter/zh-tw/SSPFMY_1.3.3/com.ibm.scala.doc/extend/iwa_extend_windowsos_windowseventlog.html)
+
+
+- [event log Viewer](http://www.lijyyh.com/2012/08/windows-windows-system-maintenance.html) --good
